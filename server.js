@@ -35,11 +35,11 @@ db.run("DELETE FROM products");
 
 // This adds simple product data into the database.
 const products = [
-    ["Rasta Gaming Headset", "Comfortable headset with clear sound for gaming sessions.", 49.99, "https://images.unsplash.com/photo-1599669454699-248893623440"],
-    ["Irie RGB Keyboard", "Mechanical style keyboard with colourful lights.", 59.99, "https://images.unsplash.com/photo-1587829741301-dc798b83add3"],
-    ["Zion Gaming Mouse", "Fast and accurate mouse for casual and competitive gaming.", 29.99, "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7"],
-    ["Green Vibes Mousepad", "Large mousepad with smooth surface and simple design.", 19.99, "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2"],
-    ["Streamer Microphone", "Simple microphone for gaming, streaming, and online calls.", 39.99, "https://images.unsplash.com/photo-1590602847861-f357a9332bbc"]
+    ["HYPERX Cloud III S Wireless Gaming Headset", "Comfortable headset with clear sound for gaming sessions.", 149.99, "https://media.currys.biz/i/currysprod/M10286101_black?$l-large$&fmt=auto"],
+    ["Ajazz AK680 MAX Magnetic Mechanical Keyboard", "Mechanical style keyboard with colourful lights.", 49.99, "https://mobspares.com/cdn/shop/files/TBD0606342706.jpg?v=1773668755&width=700"],
+    ["Steel Series Prime Wireless Gaming Mouse", "Fast and accurate mouse for casual and competitive gaming.", 49.99, "https://images.ctfassets.net/hmm5mo4qf4mf/3efDB6CHu0PycWNEvJ4eGT/eeb038610a169522f367f1ab6d040041/buyimg_prime_wl_005.png__1920x1080_crop-fit_optimize_subsampling-2-781.png?fm=webp&q=90&fit=scale&w=1200"],
+    ["Neon Vibes Mousepad", "Large mousepad with smooth surface and simple design.", 19.99, "https://m.media-amazon.com/images/I/71svGf+rhGL._AC_SL1500_.jpg"],
+    ["HyperX QuadCast 2 S", "Simple microphone for gaming, streaming, and online calls.", 139.99, "https://m.media-amazon.com/images/I/71yLcw8yj6L._AC_SL1500_.jpg"]
 ];
 
 // This prepares the SQL command used to insert products.

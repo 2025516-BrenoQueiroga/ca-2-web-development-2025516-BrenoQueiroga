@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- This makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IrieTech | Gaming Accessories</title>
+
+    <!-- This connects the CSS file to style the page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header area with the shop name and navigation links -->
+    <header>
+        <h1>IrieTech</h1>
+        <p>Gaming accessories with good vibes</p>
+
+        <nav>
+            <!-- These links allow the user to move between pages -->
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <!-- Introduction section for the store -->
+        <section class="hero">
+            <h2>Welcome to IrieTech</h2>
+            <p>
+                IrieTech is a simple online store for gaming accessories such as headsets,
+                keyboards, mice, microphones and setup products.
+            </p>
+        </section>
+
+        <!-- Product section where JavaScript will insert products from the database -->
+        <section>
+            <h2>Our Products</h2>
+
+            <!-- Products from the server will appear inside this div -->
+            <div id="product-list" class="product-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer area at the bottom of the page -->
+    <footer>
+        <p>&copy; 2026 IrieTech. All rights reserved.</p>
+    </footer>
+
+    <!-- This connects the JavaScript file used to fetch products -->
+    <script src="script.js"></script>
+</body>
+</html>
