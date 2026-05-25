@@ -148,3 +148,85 @@ function removeFromCart(index) {
 
 // This loads the cart automatically when the page opens.
 loadCart();
+
+// This function validates the checkout form.
+function setupCheckoutForm() {
+
+    // This finds the checkout form in the HTML.
+    const checkoutForm = document.getElementById("checkout-form");
+
+    // This stops the function if the checkout form is not on the current page.
+    if (!checkoutForm) {
+        return;
+    }
+
+    // This listens when the user tries to submit the form.
+    checkoutForm.addEventListener("submit", function (event) {
+
+        // This stops the page from refreshing automatically.
+        event.preventDefault();
+
+        // These lines get the values typed by the user.
+        const name = document.getElementById("customer-name").value.trim();
+        const email = document.getElementById("customer-email").value.trim();
+        const phone = document.getElementById("customer-phone").value.trim();
+        const address = document.getElementById("customer-address").value.trim();
+        const message = document.getElementById("checkout-message");
+
+        // This pattern allows only letters and spaces in the name.
+        const namePattern = /^[A-Za-z\s]+$/;
+
+        // This pattern allows only numbers in the phone field.
+        const phonePattern = /^[0-9]+$/;
+
+        // This checks if any field is empty.
+        if (name === "" || email === "" || phone === "" || address === "") {
+            message.textContent = "Please fill in all fields.";
+            message.style.color = "red";
+            return;
+        }
+
+        // This checks if the name has only letters and spaces.
+        if (!namePattern.test(name)) {
+            message.textContent = "Name must contain only letters and spaces.";
+            message.style.color = "red";
+            return;
+        }
+
+        // This checks if the phone number has only numbers.
+        if (!phonePattern.test(phone)) {
+            message.textContent = "Phone number must contain only numbers.";
+            message.style.color = "red";
+            return;
+        }
+
+        // This checks if the phone number has 9 or 10 digits.
+        if (phone.length < 9 || phone.length > 10) {
+            message.textContent = "Phone number must be 9 or 10 digits long.";
+            message.style.color = "red";
+            return;
+        }
+
+        // This checks if the cart is empty before placing the order.
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+            message.textContent = "Your cart is empty. Please add products before checkout.";
+            message.style.color = "red";
+            return;
+        }
+
+        // This shows a success message if all checks pass.
+        message.textContent = "Order placed successfully. Thank you for shopping with IrieTech!";
+        message.style.color = "#2ecc71";
+
+        // This clears the cart after the order is placed.
+        localStorage.removeItem("cart");
+
+        // This resets the form fields.
+        checkoutForm.reset();
+    });
+}
+
+// This runs the checkout form setup when the page opens.
+setupCheckoutForm();

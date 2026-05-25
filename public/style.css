@@ -134,3 +134,35 @@ footer {
     margin-top: 30px;
     border-top: 4px solid #f1c40f;
 }
+
+/* This styles the checkout form container */
+.checkout-box {
+    background-color: #1d1d1d;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+/* This styles the labels inside the checkout form */
+.checkout-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+/* This styles the input and textarea fields */
+.checkout-box input,
+.checkout-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* This styles the checkout message */
+#checkout-message {
+    margin-top: 15px;
+    font-weight: bold;
+}

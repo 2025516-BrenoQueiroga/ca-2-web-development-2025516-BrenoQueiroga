@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- This makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IrieTech | Checkout</title>
+
+    <!-- This connects the CSS file to this page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header with website name and navigation links -->
+    <header>
+        <h1>IrieTech</h1>
+        <p>Complete Your Order</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page introduction section -->
+        <section class="hero">
+            <h2>Checkout</h2>
+            <p>Enter your details below to complete your order.</p>
+        </section>
+
+        <!-- Checkout form section -->
+        <section class="checkout-box">
+            <form id="checkout-form">
+
+                <!-- This field collects the customer's full name -->
+                <label for="customer-name">Full Name</label>
+                <input type="text" id="customer-name">
+
+                <!-- This field collects the customer's email address -->
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email">
+
+                <!-- This field collects the customer's phone number -->
+                <label for="customer-phone">Phone Number</label>
+                <input type="text" id="customer-phone">
+
+                <!-- This field collects the customer's address -->
+                <label for="customer-address">Delivery Address</label>
+                <textarea id="customer-address" rows="4"></textarea>
+
+                <!-- This button submits the checkout form -->
+                <button type="submit">Place Order</button>
+
+                <!-- This paragraph shows validation or success messages -->
+                <p id="checkout-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 IrieTech. All rights reserved.</p>
+    </footer>
+
+    <!-- This connects the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
