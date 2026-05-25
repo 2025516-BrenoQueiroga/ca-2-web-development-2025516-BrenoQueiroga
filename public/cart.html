@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- This makes the page responsive on smaller screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IrieTech | Cart</title>
+
+    <!-- This connects the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header section with navigation -->
+    <header>
+        <h1>IrieTech</h1>
+        <p>Your Gaming Cart</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <!-- Main cart section -->
+    <main>
+
+        <!-- Cart title -->
+        <section class="hero">
+            <h2>Shopping Cart</h2>
+            <p>Review your selected gaming accessories.</p>
+        </section>
+
+        <!-- Products added to the cart will appear here -->
+        <section id="cart-items" class="product-grid"></section>
+
+        <!-- Total price section -->
+        <section class="hero">
+            <h2>Total</h2>
+
+            <!-- This paragraph displays the total cart value -->
+            <p id="cart-total">€0.00</p>
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 IrieTech. All rights reserved.</p>
+    </footer>
+
+    <!-- This connects the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
