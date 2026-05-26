@@ -67,6 +67,37 @@ app.get("/api/products", (req, res) => {
     });
 });
 
+// This route updates product prices to simulate market rate changes.
+app.put("/api/update-prices", (req, res) => {
+
+    // This selects all products from the database.
+    db.all("SELECT * FROM products", [], (error, products) => {
+        if (error) {
+            res.status(500).json({ error: "Could not load products" });
+            return;
+        }
+
+        // This goes through each product and changes the price slightly.
+        products.forEach(product => {
+
+            // This creates a small random price change between -2 and +2 euros.
+            const priceChange = (Math.random() * 4) - 2;
+
+            // This calculates the new price and keeps it above 5 euros.
+            const newPrice = Math.max(5, product.price + priceChange).toFixed(2);
+
+            // This updates the product price in the database.
+            db.run(
+                "UPDATE products SET price = ? WHERE id = ?",
+                [newPrice, product.id]
+            );
+        });
+
+        // This sends a success response back to the frontend.
+        res.json({ message: "Prices updated successfully" });
+    });
+});
+
 // This starts the server.
 app.listen(PORT, () => {
     console.log(`IrieTech server is running at http://localhost:${PORT}`);
