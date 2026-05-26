@@ -166,3 +166,59 @@ footer {
     margin-top: 15px;
     font-weight: bold;
 }
+
+/* This adds a smooth transition effect to buttons and cards */
+button,
+.product-card {
+    transition: 0.3s;
+}
+
+/* This slightly enlarges the product card when hovered */
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+/* This improves spacing for headings */
+h2 {
+    margin-bottom: 15px;
+}
+
+/* This adds spacing below paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* This styles the empty cart message */
+#cart-items p {
+    font-size: 18px;
+}
+
+/* This improves image display on smaller screens */
+.product-card img {
+    max-height: 180px;
+}
+
+/* Responsive layout for tablets and smaller devices */
+@media (max-width: 768px) {
+
+    /* This reduces the title size on smaller screens */
+    header h1 {
+        font-size: 28px;
+    }
+
+    /* This stacks navigation links vertically */
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* This reduces page padding */
+    main {
+        padding: 15px;
+    }
+
+    /* This adjusts the hero section */
+    .hero {
+        padding: 20px;
+    }
+}
