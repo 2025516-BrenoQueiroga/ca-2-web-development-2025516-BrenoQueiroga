@@ -231,36 +231,3 @@ function setupCheckoutForm() {
 
 // This runs the checkout form setup when the page opens.
 setupCheckoutForm();
-
-// This function sets up the market price update button.
-function setupPriceUpdateButton() {
-
-    // This finds the price update button on the homepage.
-    const updateButton = document.getElementById("update-prices-btn");
-
-    // This stops the function if the button is not on the current page.
-    if (!updateButton) {
-        return;
-    }
-
-    // This listens for a click on the update price button.
-    updateButton.addEventListener("click", function () {
-
-        // This sends a request to the server to update prices in the database.
-        fetch("/api/update-prices", {
-            method: "PUT"
-        })
-        .then(response => response.json())
-        .then(data => {
-
-            // This gives simple feedback to the user.
-            alert(data.message);
-
-            // This reloads the page to show the new prices.
-            location.reload();
-        });
-    });
-}
-
-// This runs the price update button setup when the page opens.
-setupPriceUpdateButton();
