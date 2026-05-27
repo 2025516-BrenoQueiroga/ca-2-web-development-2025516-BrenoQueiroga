@@ -75,8 +75,9 @@ function loadCart() {
 
     // This checks if the cart is empty.
     if (cart.length === 0) {
-        cartItems.innerHTML = "<p>Your cart is empty.</p>";
-        return;
+    cartItems.innerHTML = "<p>Your cart is empty.</p>";
+    cartTotal.textContent = "€0.00";
+    return;
     }
 
     // This requests products from the server.
