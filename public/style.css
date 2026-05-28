@@ -72,12 +72,12 @@ main {
     border-left: 5px solid #e74c3c;
 }
 
-/* This creates a responsive grid for products */
+/* This creates a responsive product grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 25px;
 }
 
 /* This styles each product card */
@@ -107,9 +107,9 @@ main {
     margin-top: 12px;
 }
 
-/* This styles product description text */
+/* This styles product descriptions */
 .product-card p {
-    margin: 10px 0;
+    flex-grow: 1;
 }
 
 /* This styles product prices */
@@ -225,10 +225,12 @@ p {
         font-size: 28px;
     }
 
-    /* This stacks navigation links vertically */
-    nav a {
-        display: block;
-        margin: 10px 0;
+    /* This reorganises navigation links for smaller screens */
+    nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
     }
 
     /* This reduces page padding */
@@ -245,5 +247,15 @@ p {
     border-left: 5px solid #e74c3c;
     text-align: center;
     box-shadow: 0 0 12px rgba(231, 76, 60, 0.15);
+    }
+    /* This styles section titles */
+    h2 {
+        font-family: 'Orbitron', Arial, sans-serif;
+        letter-spacing: 1px;
+    }
+
+    /* This adds a glow effect to the website title */
+    header h1 {
+        text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
     }
 }
